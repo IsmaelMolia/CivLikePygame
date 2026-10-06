@@ -1,0 +1,41 @@
+import math
+
+# assets
+ASSETS_PATH = "4_pygame/assets"
+CURSOR = "pointer_scifi_b.png"
+CURSOR_FILEPATH = f"{ASSETS_PATH}/cursors/Default/{CURSOR}"
+
+# écran
+W, H = 1280, 720
+MIN_W, MIN_H = W//2, H//2
+MAX_W, MAX_H = round(W * 1.2), round(H * 1.2)
+
+# boutons
+VERTICAL_HORIZONTAL_RATIO = (16 / 9)
+MAX_VERTICAL_BUTTONS = 10
+MAX_HORIZONTAL_BUTTONS = round(MAX_VERTICAL_BUTTONS * VERTICAL_HORIZONTAL_RATIO)
+BUTTON_ZOOM = 1.2
+BUTTON_ROUNDNESS = 10
+BUTTON_DEFAULT_BACKGROUND_COLOR = "purple" # temporaire
+BUTTON_DEFAULT_TEXT_COLOR = "white" # temporaire
+
+# sauvegardes
+MIN_SAVE = 1
+MAX_SAVE = 10
+
+# tiles
+TILE_NUMBER_FACTOR = 1.75
+INITIAL_TILE_NUMBER_FACTOR = TILE_NUMBER_FACTOR
+TILES_COLUMNS = round(16 * TILE_NUMBER_FACTOR)
+TILE_HORIZONTAL_SPACE = W / TILES_COLUMNS
+TILE_VERTICAL_SPACE = (TILE_HORIZONTAL_SPACE / math.sqrt(3)) * (3/2)
+TILES_LINES = round(H / TILE_VERTICAL_SPACE)
+
+# map
+MIN_LAYERS = 1 # sinon bugs ?
+MAX_LAYERS = 15
+
+# zoom camera
+MIN_FACTOR = 0.75
+MAX_FACTOR = 5
+CHANGING_SIZE_SPEED = 20 # higher number = slower
